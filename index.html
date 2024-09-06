@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            background-color: rgb(33, 37, 41);
+            color: white;
+        }
+
+        .blog-header {
+            padding: 2rem 0;
+            background-color: rgb(33, 37, 41);
+
+            padding-left: 90px;
+            padding-right: 90px;
+
+        }
+
+        .blog-header-logo {
+            font-size: 2.25rem;
+            color: white !important;
+            text-decoration: none;
+            font-family: "Playfair Display", Georgia, "Times New Roman", serif
+                /*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+            
+            transform: scale(1, 1.25) !important;
+
+
+        }
+
+        .blog-main {
+            padding: 4rem 0;
+        }
+
+        .blog-footer {
+            padding: 2.5rem 0;
+            color: white;
+            text-align: center;
+            border-top: 1px solid #e5e5e5;
+            background-color: rgb(43, 48, 53);
+            border: rgb(43, 48, 53);
+            margin-top: 30px;
+        }
+
+        .blog-sidebar .nav-link {
+            padding: .25rem 0;
+            font-size: 1rem;
+            color: white;
+
+
+        }
+
+        .blog-sidebar .nav-link:hover {
+            color: #007bff;
+        }
+
+        .blog-post-title {
+            font-size: 2.5rem;
+            font-family: "Playfair Display", Georgia, "Times New Roman";
+            font-size: 42.5232px;
+            font-weight: bold;
+            transform: scale(1, 1.25);
+        }
+
+        .blog-post-meta {
+            color: #999;
+            margin-bottom: 1.25rem;
+        }
+
+        .container-1 {
+            background-color: rgb(52, 58, 64);
+            padding-left: 50px;
+            padding-top: 60px;
+            padding-bottom: 40px;
+            border-radius: 6px;
+        }
+
+        .container-1 h1 {
+            font-style: italic;
+            color: #e5e5e5;
+            font-family: "Playfair Display", Georgia, "Times New Roman";
+        }
+
+        .container-1 p {
+            color: #e5e5e5;
+        }
+
+        .container {
+            color: #e5e5e5;
+
+        }
+
+        .options {
+            color: white;
+
+
+
+        }
+
+        .featured {
+            max-width: 50%;
+
+        }
+
+        .post {
+            max-width: 50%;
+        }
+
+        .card {
+            background-color: #272424;
+            color: white;
+            font-family: "Playfair Display", Georgia, "Times New Roman";
+            
+        }
+        .card-title{
+            transform: scale(1, 1.2);
+            font-weight: bold;
+        }
+
+        .thumbnail {
+            margin-top: 20px;
+
+        }
+
+        .about {
+            background-color: rgb(43, 48, 53);
+            border-radius: 6px;
+        }
+
+        .col {
+            background-color: rgb(33, 37, 41);
+            border: solid rgb(73, 80, 87);
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+            border-width: 0.8px;
+        }
+
+        .h-100 {
+            background-color: rgb(73, 80, 87);
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+
+
+
+        .style {
+            font-family: "Playfair Display", Georgia, "Times New Roman";
+            font-weight: 500;
+            font-style: italic;
+            font-size: 26.4352px;
+        }
+
+        .content {
+            padding: 1.5rem;
+        }
+
+        .fst-italic {
+            font-family: "Playfair Display", Georgia, "Times New Roman";
+            font-weight: 500;
+            font-size: 23.2176px;
+        }
+
+        .table {
+            --bs-table-color: rgba(222, 226, 230, 0.75);
+            --bs-table-bg: brgb(33, 37, 41);
+        }
+
+        .feature {
+            font-family: "Playfair Display", Georgia, "Times New Roman";
+            font-weight: 500;
+            font-size: 42.5232px;
+            transform: scale(1, 1.25);
+
+        }
+
+        .list-unstyled {
+            color: rgb(110, 168, 254);
+        }
+
+        .display {
+            font-family: "Playfair Display", Georgia, "Times New Roman";
+            transform: scale(1, 1.18);
+
+        }
+
+        .link-1 {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+
+        }
+        .link {
+            color: white;
+            text-decoration: none;
+        
+        }
+
+        .nav-buttons {
+            justify-content: space-between;
+
+        }
+
+        .options {
+            justify-content: space-between;
+            display: flex !important;
+        }
+
+        .title {
+            transform: scale(1, 1.25);
+        }
+       
+        .mb-0 {
+            color: white !important;
+            font-family: "Playfair Display", Georgia, "Times New Roman";
+            font-weight: bold;
+            /* transform: scale(1, 1.25); */
+        }
+        .text-body-secondary {
+            color: rgba(222, 226, 230, 0.75) !important;
+        }
+        .list-unstyled {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+        }
+        .archives {
+            font-family: "Playfair Display", Georgia, "Times New Roman";
+            font-style: italic;
+            font-weight: bold;
+            transform: scale(1, 1.25);
+        }
+        .text-body-emphasis {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+            color: white !important;
+            font-size: large;
+
+        }
+        .para {
+            font-size: larger;
+            transform: scale(1, 1.1);
+        }
+        .d-inline-block {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+        }
+        .date {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            color: rgba(222, 226, 230, 0.75);
+        }
+        .card-text {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        .style {
+            transform: scale(1, 1.25);
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+    <header class="blog-header">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-4 pt-1">
+                <a class="link-secondary" href="#">Subscribe</a>
+            </div>
+            <div class="col-4 text-center">
+                <a class="blog-header-logo text-dark" href="#"><strong>Large</strong></a>
+            </div>
+
+            <div class="col-4 d-flex justify-content-end align-items-center">
+                <a class="link-secondary" href="#" aria-label="Search">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path d="M21 21l-5.2-5.2"></path></svg>
+                </a>
+                <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+              </div>
+
+
+           
+        </div>
+    </header>
+
+
+
+
+
+    <div class="container">
+        <hr>
+        <div class="nav-buttons">
+
+            <nav class="options">
+                <a class="link-1" href="#">World</a>
+                <a class="link" href="#">U.S.</a>
+                <a class="link" href="#">Technology</a>
+                <a class="link" href="#">Design</a>
+                <a class="link" href="#">Culture</a>
+                <a class="link" href="#">Business</a>
+                <a class="link" href="#">Politics</a>
+                <a class="link" href="#">Opinion</a>
+                <a class="link" href="#">Science</a>
+                <a class="link" href="#">Health</a>
+                <a class="link" href="#">Style</a>
+                <a class="link" href="#">Travel</a>
+            </nav>
+
+        </div>
+        <hr>
+
+
+        <div class="container-1">
+            <h1 class="title"><strong>Title of a longer featured </strong><br><strong>blog post</strong></h1><br>
+            <p class="para">Multiple lines of text that form the lede, informing new readers quickly<br>and efficiently
+                about what's
+                most interesting in this post's contents.</p><br>
+                <p class="lead mb-0">
+                    <a href="#" class="text-body-emphasis fw-bold">Continue reading...</a>
+                </p>
+        </div>
+
+        <div class="thumbnail">
+            <div class="row">
+                <!-- First Card -->
+                <div class="featured">
+                    <div class="card">
+                        <div class="row g-0">
+                            <div class="col p-4 d-flex flex-column">
+                                <strong class="d-inline-block mb-2 text-primary">World</strong>
+                                <h3 class="card-title">Featured post</h3>
+                                <p class="date">Nov 12</p>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content.</p>
+                                <a href="#" class="stretched-link">Continue reading</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <div class="h-100 d-flex align-items-center justify-content-center"
+                                    style="width: 200px; background-color: #6c757d; color: #eceeef;">
+                                    Thumbnail
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Card -->
+                <div class="post">
+                    <div class="card">
+                        <div class="row g-0">
+                            <div class="col p-4 d-flex flex-column">
+                                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                                <h3 class="card-title">Post title</h3>
+                                <p class="date">Nov 11</p>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content.</p>
+                                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                                        Continue reading
+                                        <svg class="bi">
+                                            <use xlink:href="#chevron-right"></use>
+                                        </svg>
+                                    </a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <div class="h-100 d-flex align-items-center justify-content-center"
+                                    style="width: 200px; background-color: #6c757d; color: #eceeef;">
+                                    Thumbnail
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row g-5">
+            <div class="col-md-8">
+                <article class="blog-post">
+                    <h3 class="style"><strong>From the Firehouse</strong></h3>
+                    <hr>
+                    <h2 class="blog-post-title">Sample blog post</h2>
+                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
+
+                    <p>This blog post shows a few different types of content that's supported and styled with Bootstrap.
+                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+                    <hr>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                        space and show how a longer snippet of text affects the surrounding content. we'll repeat it
+                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
+                        text.</p>
+                    <h2 class="display"><strong>Blockquotes</strong></h2>
+                    <p>This is an example blockquote in action.</p>
+                    <h4>Quoted text goes here.</h4>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
+                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
+                        text.</p>
+                    <h2 class="display"><strong>Example lists</strong></h2>
+                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the
+                        other highly repetitive body text used throughout. This is an example unordered list:</p>
+                    <uL>
+                        <li>First list item</li>
+                        <li>Second list item with a longer description</li>
+                        <li>Third list item to close it out</li>
+                    </uL>
+                    <p>And this an ordered list:</p>
+                    <ol>
+                        <li>First list item</li>
+                        <li>Second list item with a longer description</li>
+                        <li>Third list item to close it out</li>
+
+                    </ol>
+                    <p>And this is a definition list:</p>
+                    <p><strong>HyperText Markup Language(HTML)</strong></p>
+                    <p>The language used to describe and define the content of a Web page</p>
+                    
+                    <p><strong>Cascading Style Sheets (CSS)</strong></p>
+                    <p>Used to describe the appearance of Web Content</p>
+                    <p><strong>JavaScript (JS)</strong></p>
+                    <p>The Programming language used to build advanced Web sites and applications</p>
+
+                    <h2 class="display"><strong>Inline HTML elements</strong></h2>
+                    <p>HTML defines a long list of a available inline tags, a complete list of which can be found on the
+                        <a href="#">Mozilla Developer Network.</a>
+                    </p>
+                    <ul>
+                        <li><strong>To bold text</strong>, use <code>&lt;strong&gt;</code>.</li>
+                        <li><em>To italicize text</em>, use <code>&lt;em&gt;</code>.</li>
+                        <li>Abbreviations, like <abbr title="HyperText Markup Language">HTML</abbr>, should use
+                            <code>&lt;abbr&gt;</code>, with an optional <code>title</code> attribute for the full
+                            phrase.
+                        </li>
+                        <li>Citations, like &mdash; <cite>Mark Otto</cite>, should use <code>&lt;cite&gt;</code>.</li>
+                        <li><del>Deleted text</del> should use <code>&lt;del&gt;</code> and <ins>inserted text</ins>
+                            should use <code>&lt;ins&gt;</code>.</li>
+                        <li>Superscript<sup>text</sup> uses <code>&lt;sup&gt;</code> and subscript<sub>text</sub> uses
+                            <code>&lt;sub&gt;</code>.
+                        </li>
+                    </ul>
+                    <p>Most of these elements are styled by browsers with few modifications on our part.</p>
+
+
+                    <h2 class="display"><strong>Heading</strong></h2>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
+                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
+                        text.</p>
+                    
+                    <h2 class="display"><strong>Sub-heading</strong></h2>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
+                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
+                        text.</p>
+                </article>
+
+                <article class="blog-post">
+                    <h2 class="blog-post-title">Another blog post</h2>
+                    <p class="blog-post-meta">December 23, 2020 by <a href="#">Jacob</a></p>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
+                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
+                        text.</p>
+                    <p>Longer quote goes here, maybe with some <strong>emphasized text</strong> in the middle of it.</p>
+                    
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
+                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
+                        text.</p>
+                    
+                    <h2 class="display"><strong>Example table</strong></h2>
+                    <p>And don't forget about tables in these posts:</p>
+                    
+                    <table class="table">
+                        <th>Name</th>
+                        <th>Upvotes</th>
+                        <th>Downvotes</th>
+                        <tr>
+                            <td>Alice</td>
+                            <td>10</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>Bob</td>
+                            <td>4</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>charlie</td>
+                            <td>7</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>Totals</td>
+                            <td>21</td>
+                            <td>23</td>
+                        </tr>
+                    </table>
+                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the
+                        other highly repetitive body text used throughout.</p>
+
+
+                </article>
+                <br><br>
+
+                <article class="blog-post">
+                    <h1 class="feature"><strong>New feature</strong></h1>
+                    <p>December 14,2020 by <a href="#">Chris</a></p>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
+                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
+                        text.</p>
+                    <ul>
+                        <li>First List item</li>
+                        <li>Second List item with a longer description</li>
+                        <li>Third List item to close it out</li>
+
+                    </ul>
+                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the
+                        other highly repetitive body text used throughout.</p>
+                </article>
+                <nav>
+                    <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+                    <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+                </nav>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-sticky" style="top: 2rem;">
+                    <div class="about">
+                        <div class="content">
+                            <h4 class="fst-italic">About</h4>
+                            <p class="mb-0">Customize this section to tell your visitors a little bit about your
+                                publication, writers, content, or something else entirely. Totally up to you.</p>
+                        </div>
+                    </div><br>
+
+                    <div>
+                        <h4 class="fst-italic"><strong>Recent posts</strong></h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                                    href="#">
+                                    <svg class="bd-placeholder-img" width="100%" height="96"
+                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                                        <rect width="100%" height="100%" fill="#777"></rect>
+                                    </svg>
+                                    <div class="col-lg-8">
+                                        <h6 class="mb-0">Example blog post title</h6>
+                                        <small class="text-body-secondary">January 15, 2024</small>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                                    href="#">
+                                    <svg class="bd-placeholder-img" width="100%" height="96"
+                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                                        <rect width="100%" height="100%" fill="#777"></rect>
+                                    </svg>
+                                    <div class="col-lg-8">
+                                        <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
+                                        <small class="text-body-secondary">January 13, 2024</small>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                                    href="#">
+                                    <svg class="bd-placeholder-img" width="100%" height="96"
+                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                                        <rect width="100%" height="100%" fill="#777"></rect>
+                                    </svg>
+                                    <div class="col-lg-8">
+                                        <h6 class="mb-0">Example blog post title</h6>
+                                        <small class="text-body-secondary">January 15, 2024</small>
+                                    </div>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+
+
+                    <div class="p-4">
+                        <h4 class="archives">Archives</h4>
+                        <ol class="list-unstyled mb-0">
+                            <li><a href="#">March 2021</a></li>
+                            <li><a href="#">February 2021</a></li>
+                            <li><a href="#">January 2021</a></li>
+                            <li><a href="#">December 2020</a></li>
+                            <li><a href="#">November 2020</a></li>
+                            <li><a href="#">October 2020</a></li>
+                            <li><a href="#">September 2020</a></li>
+                            <li><a href="#">August 2020</a></li>
+                            <li><a href="#">July 2020</a></li>
+                            <li><a href="#">June 2020</a></li>
+                            <li><a href="#">May 2020</a></li>
+                            <li><a href="#">April 2020</a></li>
+                        </ol>
+                    </div>
+
+                    <div class="p-4">
+                        <h4 class="fst-italic">Elsewhere</h4>
+                        <ol class="list-unstyled">
+                            <li><a href="#">GitHub</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="blog-footer">
+        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="#">@mdo.</a></p>
+        <p>
+            <a href="#">Back to top</a>
+        </p>
+    </footer>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
