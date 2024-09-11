@@ -30,8 +30,9 @@
             color: white !important;
             text-decoration: none;
             font-family: "Playfair Display", Georgia, "Times New Roman", serif
-                /*rtl:Amiri, Georgia, "Times New Roman", serif*/;
-            
+                /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+            ;
+
             transform: scale(1, 1.25) !important;
 
 
@@ -119,9 +120,10 @@
             background-color: #272424;
             color: white;
             font-family: "Playfair Display", Georgia, "Times New Roman";
-            
+
         }
-        .card-title{
+
+        .card-title {
             transform: scale(1, 1.2);
             font-weight: bold;
         }
@@ -198,10 +200,11 @@
             font-weight: bold;
 
         }
+
         .link {
             color: white;
             text-decoration: none;
-        
+
         }
 
         .nav-buttons {
@@ -217,101 +220,116 @@
         .title {
             transform: scale(1, 1.25);
         }
-       
+
         .mb-0 {
             color: white !important;
             font-family: "Playfair Display", Georgia, "Times New Roman";
             font-weight: bold;
             /* transform: scale(1, 1.25); */
         }
+
         .text-body-secondary {
             color: rgba(222, 226, 230, 0.75) !important;
         }
+
         .list-unstyled {
             font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
         }
+
         .archives {
             font-family: "Playfair Display", Georgia, "Times New Roman";
             font-style: italic;
             font-weight: bold;
             transform: scale(1, 1.25);
         }
+
         .text-body-emphasis {
             font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
             color: white !important;
             font-size: large;
 
         }
+
         .para {
             font-size: larger;
             transform: scale(1, 1.1);
         }
+
         .d-inline-block {
             font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
         }
+
         .date {
             font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
             color: rgba(222, 226, 230, 0.75);
         }
+
         .card-text {
             font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         }
+
         .style {
             transform: scale(1, 1.25);
         }
 
-        
-
+        .img-fluid {
+            height: 100%;
+        }
     </style>
 </head>
 
 <body>
-    <header class="blog-header">
-        <div class="row flex-nowrap justify-content-between align-items-center">
-            <div class="col-4 pt-1">
-                <a class="link-secondary" href="#">Subscribe</a>
+    <header class="blog-header py-3">
+        <div class="container">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <!-- Left section: Subscribe link -->
+                <div class="col-6 col-md-4 pt-1">
+                    <a class="link-secondary" href="#">Subscribe</a>
+                </div>
+    
+                <!-- Center section: Logo -->
+                <div class="col-6 col-md-4 text-center">
+                    <a class="blog-header-logo text-dark" href="#"><strong>Large</strong></a>
+                </div>
+    
+                <!-- Right section: Search and Sign-up -->
+                <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end align-items-center mt-3 mt-md-0">
+                    <a class="link-secondary" href="#" aria-label="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24">
+                            <title>Search</title>
+                            <circle cx="10.5" cy="10.5" r="7.5"></circle>
+                            <path d="M21 21l-5.2-5.2"></path>
+                        </svg>
+                    </a>
+                    <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+                </div>
             </div>
-            <div class="col-4 text-center">
-                <a class="blog-header-logo text-dark" href="#"><strong>Large</strong></a>
-            </div>
-
-            <div class="col-4 d-flex justify-content-end align-items-center">
-                <a class="link-secondary" href="#" aria-label="Search">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path d="M21 21l-5.2-5.2"></path></svg>
-                </a>
-                <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
-              </div>
-
-
-           
         </div>
     </header>
+    
 
 
 
 
 
     <div class="container">
-        <hr>
-        <div class="nav-buttons">
-
-            <nav class="options">
-                <a class="link-1" href="#">World</a>
-                <a class="link" href="#">U.S.</a>
-                <a class="link" href="#">Technology</a>
-                <a class="link" href="#">Design</a>
-                <a class="link" href="#">Culture</a>
-                <a class="link" href="#">Business</a>
-                <a class="link" href="#">Politics</a>
-                <a class="link" href="#">Opinion</a>
-                <a class="link" href="#">Science</a>
-                <a class="link" href="#">Health</a>
-                <a class="link" href="#">Style</a>
-                <a class="link" href="#">Travel</a>
+        <nav class="nav-scroller py-1 mb-2">
+            <nav class="nav d-flex justify-content-between">
+                <a class="p-2 link-light text-decoration-none" href="#"><strong>World</strong></a>
+                <a class="p-2 link-light text-decoration-none" href="#">U.S</a>
+                <a class="p-2 link-light text-decoration-none" href="#">Technology</a>
+                <a class="p-2 link-light text-decoration-none" href="#">Design</a>
+                <a class="p-2 link-light text-decoration-none" href="#">Culture</a>
+                <a class="p-2 link-light text-decoration-none" href="#">Business</a>
+                <a class="p-2 link-light text-decoration-none" href="#">Politics</a>
+                <a class="p-2 link-light text-decoration-none" href="#">Opinion</a>
+                <a class="p-2 link-light text-decoration-none" href="#">Science</a>
+                <a class="p-2 link-light text-decoration-none" href="#">Health</a>
+                <a class="p-2 link-light text-decoration-none" href="#">Style</a>
+                <a class="p-2 link-light text-decoration-none" href="#">Travel</a>
             </nav>
+        </nav>
 
-        </div>
-        <hr>
 
 
         <div class="container-1">
@@ -319,9 +337,9 @@
             <p class="para">Multiple lines of text that form the lede, informing new readers quickly<br>and efficiently
                 about what's
                 most interesting in this post's contents.</p><br>
-                <p class="lead mb-0">
-                    <a href="#" class="text-body-emphasis fw-bold">Continue reading...</a>
-                </p>
+            <p class="lead mb-0">
+                <a href="#" class="text-body-emphasis fw-bold">Continue reading...</a>
+            </p>
         </div>
 
         <div class="thumbnail">
@@ -340,10 +358,14 @@
                             </div>
                             <div class="col-auto d-none d-lg-block">
                                 <div class="h-100 d-flex align-items-center justify-content-center"
-                                    style="width: 200px; background-color: #6c757d; color: #eceeef;">
-                                    Thumbnail
+                                    style="width: 200px;">
+                                    <img src="img/img1.jpg" class="bd-placeholder-img" width="200" height="250"
+                                        alt="Responsive image">
+
+
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -358,17 +380,19 @@
                                 <p class="date">Nov 11</p>
                                 <p class="card-text">This is a wider card with supporting text below as a natural
                                     lead-in to additional content.</p>
-                                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-                                        Continue reading
-                                        <svg class="bi">
-                                            <use xlink:href="#chevron-right"></use>
-                                        </svg>
-                                    </a>
+                                <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                                    Continue reading
+                                    <svg class="bi">
+                                        <use xlink:href="#chevron-right"></use>
+                                    </svg>
+                                </a>
                             </div>
                             <div class="col-auto d-none d-lg-block">
                                 <div class="h-100 d-flex align-items-center justify-content-center"
-                                    style="width: 200px; background-color: #6c757d; color: #eceeef;">
-                                    Thumbnail
+                                    style="width: 200px;">
+                                    <img src="img/img2.jpg" class="bd-placeholder-img" width="200" height="250"
+                                        alt="Responsive image">
+
                                 </div>
                             </div>
                         </div>
@@ -418,7 +442,7 @@
                     <p>And this is a definition list:</p>
                     <p><strong>HyperText Markup Language(HTML)</strong></p>
                     <p>The language used to describe and define the content of a Web page</p>
-                    
+
                     <p><strong>Cascading Style Sheets (CSS)</strong></p>
                     <p>Used to describe the appearance of Web Content</p>
                     <p><strong>JavaScript (JS)</strong></p>
@@ -450,7 +474,7 @@
                         space and show how a longer snippet of text affects the surrounding content. We'll repeat it
                         often to keep the demonstration flowing, so be on the lookout for this exact same string of
                         text.</p>
-                    
+
                     <h2 class="display"><strong>Sub-heading</strong></h2>
                     <p>This is some additional paragraph placeholder content. It has been written to fill the available
                         space and show how a longer snippet of text affects the surrounding content. We'll repeat it
@@ -466,15 +490,15 @@
                         often to keep the demonstration flowing, so be on the lookout for this exact same string of
                         text.</p>
                     <p>Longer quote goes here, maybe with some <strong>emphasized text</strong> in the middle of it.</p>
-                    
+
                     <p>This is some additional paragraph placeholder content. It has been written to fill the available
                         space and show how a longer snippet of text affects the surrounding content. We'll repeat it
                         often to keep the demonstration flowing, so be on the lookout for this exact same string of
                         text.</p>
-                    
+
                     <h2 class="display"><strong>Example table</strong></h2>
                     <p>And don't forget about tables in these posts:</p>
-                    
+
                     <table class="table">
                         <th>Name</th>
                         <th>Upvotes</th>
@@ -545,11 +569,13 @@
                             <li>
                                 <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
                                     href="#">
-                                    <svg class="bd-placeholder-img" width="100%" height="96"
+                                    <!-- <svg class="bd-placeholder-img" width="100%" height="96"
                                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
                                         preserveAspectRatio="xMidYMid slice" focusable="false">
-                                        <rect width="100%" height="100%" fill="#777"></rect>
-                                    </svg>
+                                        <rect width="100%" height="100%" fill="#777"></rect> 
+                                         
+                                    </svg> -->
+                                    <img src="img/img1.avif" alt="Image description" width="100%" height="96">
                                     <div class="col-lg-8">
                                         <h6 class="mb-0">Example blog post title</h6>
                                         <small class="text-body-secondary">January 15, 2024</small>
@@ -560,13 +586,15 @@
                             <li>
                                 <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
                                     href="#">
-                                    <svg class="bd-placeholder-img" width="100%" height="96"
+                                    <!-- <svg class="bd-placeholder-img" width="100%" height="96"
                                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
                                         preserveAspectRatio="xMidYMid slice" focusable="false">
-                                        <rect width="100%" height="100%" fill="#777"></rect>
-                                    </svg>
+                                        <rect width="100%" height="100%" fill="#777"></rect> 
+                                    </svg>  -->
+                                    <img src="img/img2.avif" alt="Image description" width="100%" height="96">
+
                                     <div class="col-lg-8">
-                                        <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
+                                        <h6 class="mb-0">Longer blog post title: This <br>one has multiple lines!</h6>
                                         <small class="text-body-secondary">January 13, 2024</small>
                                     </div>
                                 </a>
@@ -575,11 +603,13 @@
                             <li>
                                 <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
                                     href="#">
-                                    <svg class="bd-placeholder-img" width="100%" height="96"
+                                    <!-- <svg class="bd-placeholder-img" width="100%" height="96"
                                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
                                         preserveAspectRatio="xMidYMid slice" focusable="false">
                                         <rect width="100%" height="100%" fill="#777"></rect>
-                                    </svg>
+                                    </svg> -->
+                                    <img src="img/img4" alt="Image description" width="100%" height="96">
+
                                     <div class="col-lg-8">
                                         <h6 class="mb-0">Example blog post title</h6>
                                         <small class="text-body-secondary">January 15, 2024</small>
@@ -625,7 +655,7 @@
     </div>
 
     <footer class="blog-footer">
-        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="#">@mdo.</a></p>
+        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="#">@neha</a></p>
         <p>
             <a href="#">Back to top</a>
         </p>
